@@ -27,20 +27,23 @@ def post_tweet(tweet):
         print(f"Error posting tweet: {e}")
 
 # Main loop to run the bot
-random.shuffle(tweets)
-counter = 0
-while True:
-    if counter < 48:
-        post_tweet(tweets[counter])
-        counter += 1
-        print(counter)
-        time.sleep(1800)  # Sleep for 1800 seconds (30 minutes)
-    else:
-        post_tweet(tweets[counter])
-        counter += 1
-        print(counter)
-        time.sleep(7200)  # Sleep for 7200 seconds (2 hours)
+def main():
+    random.shuffle(tweets)
+    counter = 0
+    while True:
+        if counter < 48:
+            post_tweet(tweets[counter])
+            counter += 1
+            print(counter)
+            time.sleep(1800)  # Sleep for 1800 seconds (30 minutes)
+        else:
+            post_tweet(tweets[counter])
+            counter += 1
+            print(counter)
+            time.sleep(7200)  # Sleep for 7200 seconds (2 hours)
 
-    # Reset counter after reaching the end of tweets list
-    if counter >= len(tweets):
-        counter = 0
+        # Reset counter after reaching the end of tweets list
+        if counter >= len(tweets):
+            counter = 0
+if __name__ == "__main__":
+    main()
