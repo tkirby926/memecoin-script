@@ -28,22 +28,13 @@ def post_tweet(tweet):
 
 # Main loop to run the bot
 def main():
-    random.shuffle(tweets)
     counter = 0
     while True:
-        if counter < 48:
             post_tweet(tweets[counter])
             counter += 1
             print(counter)
-            time.sleep(1800)  # Sleep for 1800 seconds (30 minutes)
-        else:
-            post_tweet(tweets[counter])
-            counter += 1
-            print(counter)
-            time.sleep(7200)  # Sleep for 7200 seconds (2 hours)
-
-        # Reset counter after reaching the end of tweets list
-        if counter >= len(tweets):
-            counter = 0
+            time.sleep(21600)  # Sleep for 1800 seconds (30 minutes)
+            if counter >= len(tweets):
+                counter = 0
 if __name__ == "__main__":
     main()
