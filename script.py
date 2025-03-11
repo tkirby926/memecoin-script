@@ -33,7 +33,7 @@ def main():
             post_tweet(tweets[counter])
             counter += 1
             print(counter)
-            if counter < 12:
+            if counter < 16:
                 time.sleep(1800)  # Sleep for 1800 seconds (30 minutes)
             else:
                 time.sleep(10800)
