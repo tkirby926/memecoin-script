@@ -7,10 +7,10 @@ from tweets import tweets
 # Function to post the tweet using Tweepy
 def post_tweet(tweet):
     # Set up Twitter API credentials
-    access_token = '1888291574972379136-xFuZUCfLS6U24wKOOowjqQUghZ21fh'
-    access_token_secret = 'khVcxWigsUFEWtKfzBt0f4hGvlnNJJWQfTE34KiqP4Zn9'
-    api_key = 'gvDJ7eyGVZ2GkC85DLTWkNRCf'
-    api_key_secret = 'lhpUBVr3xkGDvVeyyPjiSLBtYEs5AxbMkGBYR26ooqZ3i9Na6E'
+    access_token = '1899564710439325696-5id67NTXrfjLbJDL8Mzt2XIukpYPyZ'
+    access_token_secret = 'THyzOWZ2zgOjPOqSmhIwi1XNJpjLsjqukBCwHNXBkgbaX'
+    api_key = 'G980ADBBveyNlybTiacvxD5uY'
+    api_key_secret = 'u5RoRH08ymdsyVTJpyq3Ln2xo5sF9eT3yKY3gDeRNjdwlgmBuO'
 
     # Authenticate to Twitter
     client = tweepy.Client(
@@ -33,7 +33,10 @@ def main():
             post_tweet(tweets[counter])
             counter += 1
             print(counter)
-            time.sleep(21600)  # Sleep for 1800 seconds (30 minutes)
+            if counter < 12:
+                time.sleep(1800)  # Sleep for 1800 seconds (30 minutes)
+            else:
+                time.sleep(10800)
             if counter >= len(tweets):
                 counter = 0
 if __name__ == "__main__":
