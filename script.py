@@ -7,10 +7,10 @@ from tweets import tweets
 # Function to post the tweet using Tweepy
 def post_tweet(tweet):
     # Set up Twitter API credentials
-    access_token = '1899564710439325696-pIEpgqgZwGL43rMc6yYj6Fu4I94mso'
-    access_token_secret = 'i9CSEziUOEqSVISZq4qDfWL4GOlr5pdSCHohtWJK8SzIG'
-    api_key = 'vBiGfMOkFgSoLE5bKkbDzTIi8'
-    api_key_secret = 'Ks0Db1ylUyECaiipBojurGKJqKIAtY4OlLgVcpQCAIQTiiU65W'
+    access_token = '1906370268164984832-LWG5N3gxZolcxVBMGIhouBBLLYqMmN'
+    access_token_secret = 'YDIMNJoz9wfJVDELGBME490vsK3UhiYCk6Nkxo8UpPr5C'
+    api_key = 'gcGp1y9vV7i8VZFYhR2ylJP7H'
+    api_key_secret = '8p2sTjfDdKo7FTXApWRkw9aW6jQ7zqx1ExOQ87wdtdedjgl3Fk'
 
     # Authenticate to Twitter
     client = tweepy.Client(
